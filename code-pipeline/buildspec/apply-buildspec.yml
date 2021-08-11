@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo run terraform initialization
+      - cd $CODEBUILD_SRC_DIR/infrastructure/setup 
+      - terraform init
+      - terraform validate
+
+  build:
+    commands:
+      - cd $CODEBUILD_SRC_DIR/infrastructure/setup 
+      - terraform apply --auto-approve
+
