@@ -9,6 +9,9 @@ infrastructure:<br/>
  cicd-pipeline:<br/>
  		Prerequisite: Create Secrets in Secret Manager for docker hub and github.<br/>
  					 Create a connection for github under CodePipeline -> Settings <br/>	
-       Run Terraform commands to create CICD pipeline for the infrastructure modules. Source: Github repository				 
- 					 
+       Run Terraform commands locally on this directory to create CICD pipeline for the infrastructure modules. Source: Github repository				 
+ 					 Note: terraform state files are saved on S3 bucket.<br/>
+           
+           
+           
  								
