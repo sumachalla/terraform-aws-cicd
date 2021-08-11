@@ -1,12 +1,10 @@
 variable "region" {
-    default = "eu-west-2"
+    
 }
 variable "vpc_cidr" {
-    default = "10.0.0.0/16"    
 }
 variable "public_subnet_cidr" {
-    type = list
-    default = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]    
+    type = list    
 }
 
 variable "private_subnet_cidr" {
@@ -36,12 +34,9 @@ variable "environment" {
     description = "Environment"
     default = "dev"
 }
-variable "codestar_connector_credentials" {
-    type = string
-}
 
 variable "product" {
-    default =  "camunda"  
+    default =  "SimpleWeb"  
 }
 
 variable "key_path" {
@@ -49,10 +44,3 @@ variable "key_path" {
     default = "terraform-ec2.pub"
 }
   
-variable  "pipeline_bucket_name" {
-    type = string
-}
-
-variable  "dockerhub_credentials" {
-    type = string
-}
