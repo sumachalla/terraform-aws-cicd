@@ -21,7 +21,7 @@ resource "aws_codebuild_project" "tf-plan" {
     }
     source {
         type = "CODEPIPELINE"
-        buildspec = "${file("buildspec/plan-buildspec.yml")}"
+        buildspec = "${file("${var.buildspec_plan_file}")}"
     }
 }
 
@@ -46,7 +46,7 @@ resource "aws_codebuild_project" "tf-apply" {
     }
     source {
         type = "CODEPIPELINE"
-        buildspec = "${file("buildspec/apply-buildspec.yml")}"
+        buildspec = "${file("${var.buildspec_apply_file}")}"
     }
 }
 
@@ -72,7 +72,7 @@ resource "aws_codebuild_project" "tf-destroy" {
     }
     source {
         type = "CODEPIPELINE"
-        buildspec = "${file("buildspec/destroy-buildspec.yml")}"
+        buildspec = "${file(var.buildspec_destroy_file)}"
     }
 }
 

@@ -13,3 +13,17 @@ variable "codestar_connector_credentials" {
 variable "region" {
     default = "eu-west-2"
 }
+
+variable "buildspec_destroy_file" {
+    type = string
+}
+
+variable "github_repository" {
+    type = string
+}
+variable "buildspec_plan_file" {
+    type = string
+}
+variable "buildspec_apply_file" {
+    type = string
+}

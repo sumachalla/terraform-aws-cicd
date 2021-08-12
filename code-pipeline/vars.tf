@@ -13,3 +13,16 @@ variable  "dockerhub_credentials" {
 variable "region" {
     type = string
 }
+variable "buildspec_destroy_file" {
+    type = string
+}
+
+variable "github_repository" {
+    type = string
+}
+variable "buildspec_plan_file" {
+    type = string
+}
+variable "buildspec_apply_file" {
+    type = string
+}
