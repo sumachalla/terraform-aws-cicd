@@ -1,4 +1,4 @@
-# github-aws-cicd
+# terraform-aws-cicd
 
 Terraform project to create VPC,EC2, Subnets and CICD pipeline to create infrastructure modules <br/>
  Note: terraform state files are saved on S3 bucket.<br/>
